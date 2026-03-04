@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </fieldset>
+    </form>
+
+    <!-- form안에 넣고 email을 작성하면 이메일 작성 유효성 규칙을 체크함 -->
+    <form action="">
+    <fieldset>
+        <legend>Input Tag</legend>
+        <ul>
+            <li>
+                <label for="text">text</label>
+                <input type="text" id="text" required value="wowwow" readonly>
+            </li>
+            <li>
+                <!-- 비활성화된 값 -->
+                <label for="text">text</label>
+                <input type="text" id="text" required value="wowwow" disabled>
+            </li>
+            <!-- 새로고침시 자동으로 커서가 이동됨 -->
+            <li>
+                <label for="text">text</label>
+                <input type="text" id="text" required value="wowwow" autofocus>
+            </li>
+            <li>
+                <label for="text">text</label>
+                <input type="text" id="text" required placeholder="url을 입력해주세요">
+            </li>
+            <li>
+                <label for="email">이메일</label>
+                <input type="email" id="email" required>
+            </li>
+            <!-- 전화번호의 경우 번호 키패드가 생성됨 -->
+            <li>
+                <label for="tel">전화번호</label>
+                <input type="tel" id="tel" required>
+            </li>
+            <!-- url 작성 유효성 규칙 검사 -->
+            <li>
+                <label for="url">url</label>
+                <input type="url" id="url" required>
+            </li>
+            <!-- 문자입력이 제한되고 커서를 올리면 숫자 증감 버튼 활성화됨 -->
+             <!-- 최소, 최대값 체크 -->
+            <li>
+                <label for="number">number</label>
+                <input type="number" id="number" required min="5" max="10">
+            </li>
+            <li>
+                <label for="range">range</label>
+                <input type="range" id="range" required>
+            </li>
+            <!-- 비밀번호 마스킹됨 -->
+            <li>
+                <label for="password">password</label>
+                <input type="password" id="password" required>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>날짜 관련/legend>
+            <ul>
+                <li>
+                    <label for="date">date</label>
+                    <input type="date" value="date" min="2021-07-10" max="2021-07-15">
+                </li>
+                <li>
+                    <label for="month">date</label>
+                    <input type="month" value="month" >
+                </li>
+                v<li>
+                    <label for="week">date</label>
+                    <input type="week" value="week" >
+                </li>
+            </ul>
+    </fieldset>
+    <fieldset>
+        <legend>시간관련</legend>
+        <ul>
+            <li>
+                <label for="time">time</label>
+                <input type="time" value="time" min="16:00" max="18:00">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>그외</legend>
+        <ul>
+            <li>
+                <input type="file" multiple>
+                <!-- multiple 여러개의 파일 선택 가능 -->
+            </li>
+            <!-- 서버측으로 데이터를 넘길때 사용 ui상으로는 표시되지 않음 -->
+            <li>
+                <input type="hidden" name="" value="">
+            </li>
+        </ul>
+    </fieldset>
+    <input type="submit" value="제출하기">
+    </form>
+</body>
+</html>
